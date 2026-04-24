@@ -1,0 +1,1568 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modulo Formativo – Ammissibilità della Spesa FSC 2021-2027 | Regione Molise</title>
+<style>
+  
+
+  :root {
+    --navy: #002060;
+    --blue: #002FA7;
+    --accent: #00B050;
+    --accent2: #82BF54;
+    --light: #f0f4f8;
+    --white: #ffffff;
+    --green: #00B050;
+    --red: #002060;
+    --mid: #E8E8E8;
+    --text: #002060;
+    --muted: #5B9BD5;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: Arial, sans-serif;
+    background: var(--light);
+    color: var(--text);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--navy);
+    padding: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+  }
+  .header-inner {
+    display: flex;
+    align-items: stretch;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .header-badge {
+    background: var(--accent);
+    color: var(--navy);
+    font-family: Arial, sans-serif;
+    font-weight: 900;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0 28px;
+    display: flex;
+    align-items: center;
+    writing-mode: horizontal-tb;
+    white-space: nowrap;
+  }
+  .header-title {
+    padding: 18px 32px;
+    flex: 1;
+  }
+  .header-title h1 {
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    color: var(--white);
+    font-weight: 700;
+    line-height: 1.3;
+  }
+  .header-title p {
+    font-size: 0.78rem;
+    color: var(--accent);
+    margin-top: 3px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  .header-progress {
+    padding: 18px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    min-width: 200px;
+  }
+  .progress-label {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 6px;
+  }
+  .progress-bar {
+    width: 160px;
+    height: 4px;
+    background: rgba(255,255,255,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+  .progress-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    width: 0%;
+  }
+  .progress-text {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.5);
+    margin-top: 5px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, #002FA7 60%, #002060 100%);
+    padding: 64px 32px 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 320px; height: 320px;
+    border-radius: 50%;
+    background: rgba(0,176,80,0.08);
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -80px; left: -40px;
+    width: 240px; height: 240px;
+    border-radius: 50%;
+    background: rgba(0,176,80,0.05);
+    pointer-events: none;
+  }
+  .hero-tag {
+    display: inline-block;
+    background: rgba(0,176,80,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 2px;
+    margin-bottom: 24px;
+  }
+  .hero h2 {
+    font-family: Arial, sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    color: var(--white);
+    font-weight: 900;
+    line-height: 1.15;
+    max-width: 700px;
+    margin: 0 auto 20px;
+  }
+  .hero h2 span { color: var(--accent); }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.65);
+    max-width: 560px;
+    margin: 0 auto 36px;
+    line-height: 1.6;
+  }
+  .hero-meta {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .hero-meta-item {
+    text-align: center;
+  }
+  .hero-meta-item .val {
+    font-family: Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--accent);
+    font-weight: 700;
+    display: block;
+  }
+  .hero-meta-item .lbl {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── MAIN LAYOUT ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+  }
+
+  /* ── NAV TABS ── */
+  .module-nav {
+    display: flex;
+    gap: 0;
+    margin-top: -28px;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+  .module-nav::-webkit-scrollbar { display: none; }
+  .nav-tab {
+    background: rgba(255,255,255,0.85);
+    border: none;
+    border-bottom: 3px solid transparent;
+    padding: 14px 22px;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--muted);
+    white-space: nowrap;
+    transition: all 0.25s;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(8px);
+    flex-shrink: 0;
+  }
+  .nav-tab:hover { color: var(--blue); background: white; }
+  .nav-tab.active {
+    background: white;
+    color: var(--navy);
+    border-bottom-color: var(--accent);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  .nav-tab .tab-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px; height: 20px;
+    border-radius: 50%;
+    background: var(--mid);
+    color: var(--muted);
+    font-size: 0.65rem;
+    margin-right: 7px;
+    font-weight: 700;
+    transition: all 0.25s;
+  }
+  .nav-tab.active .tab-num, .nav-tab.done .tab-num {
+    background: var(--accent);
+    color: var(--navy);
+  }
+  .nav-tab.done .tab-num::after { content: '✓'; }
+
+  /* ── SECTIONS ── */
+  .section { display: none; }
+  .section.active { display: block; }
+
+  .section-intro {
+    background: white;
+    border-left: 5px solid var(--accent);
+    padding: 28px 32px;
+    margin: 32px 0 28px;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  }
+  .section-intro h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .section-intro p {
+    color: var(--muted);
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  .section-intro .ref {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.75rem;
+    background: var(--mid);
+    padding: 4px 12px;
+    border-radius: 2px;
+    color: var(--muted);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── CARDS GRID ── */
+  .cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 28px;
+  }
+  .card {
+    background: white;
+    border-radius: 8px;
+    padding: 26px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--blue);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
+  .card.accent { border-top-color: var(--accent); }
+  .card.green { border-top-color: var(--green); }
+  .card.red { border-top-color: var(--red); }
+  .card-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .card h4 {
+    font-family: Arial, sans-serif;
+    font-size: 1.05rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+  }
+  .card p, .card li {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.65;
+  }
+  .card ul { padding-left: 16px; }
+  .card ul li { margin-bottom: 5px; }
+
+  /* ── FOCUS BOXES ── */
+  .focus-box {
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .focus-header {
+    background: var(--navy);
+    color: white;
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.2s;
+  }
+  .focus-header:hover { background: var(--blue); }
+  .focus-num {
+    background: var(--accent);
+    color: var(--navy);
+    font-weight: 900;
+    font-family: Arial, sans-serif;
+    font-size: 1.1rem;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .focus-title {
+    flex: 1;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+  .focus-arrow {
+    transition: transform 0.3s;
+    font-size: 0.8rem;
+    opacity: 0.6;
+  }
+  .focus-arrow.open { transform: rotate(180deg); }
+  .focus-body {
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.3s;
+  }
+  .focus-body.open {
+    max-height: 1200px;
+    padding: 24px;
+  }
+  .focus-body h5 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    margin: 16px 0 8px;
+  }
+  .focus-body h5:first-child { margin-top: 0; }
+  .rule-list {
+    list-style: none;
+    padding: 0;
+  }
+  .rule-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 9px 12px;
+    border-radius: 4px;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: var(--text);
+    margin-bottom: 4px;
+    background: var(--light);
+  }
+  .rule-list li::before {
+    content: '▸';
+    color: var(--accent);
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+  .alert-box {
+    border-radius: 6px;
+    padding: 14px 16px;
+    font-size: 0.86rem;
+    line-height: 1.6;
+    margin-top: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .alert-box.warning { background: #edfaf3; border-left: 4px solid var(--accent); color: #004d22; }
+  .alert-box.danger { background: #edf1ff; border-left: 4px solid #002FA7; color: #002060; }
+  .alert-box.success { background: #edfaf3; border-left: 4px solid var(--green); color: #003d1a; }
+  .alert-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+
+  /* ── CHECK TABLE ── */
+  .check-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    margin-top: 16px;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .check-table th {
+    background: var(--navy);
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+  }
+  .check-table td {
+    padding: 11px 16px;
+    border-bottom: 1px solid var(--mid);
+    vertical-align: top;
+    line-height: 1.5;
+    color: var(--text);
+  }
+  .check-table tr:last-child td { border-bottom: none; }
+  .check-table tr:nth-child(even) td { background: #fafaf8; }
+  .badge {
+    display: inline-block;
+    padding: 2px 9px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+  .badge.mandatory { background: #edf1ff; color: #002FA7; border: 1px solid #CFD5EA; }
+  .badge.conditional { background: #edf4ff; color: #002FA7; border: 1px solid #CFD5EA; }
+  .badge.optional { background: #f0f8f0; color: var(--green); border: 1px solid #b0d8b0; }
+
+  /* ── QUIZ ── */
+  .quiz-section {
+    background: white;
+    border-radius: 8px;
+    padding: 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    margin-top: 24px;
+  }
+  .quiz-section h3 {
+    font-family: Arial, sans-serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+  }
+  .quiz-section > p {
+    font-size: 0.88rem;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+  .question {
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--mid);
+  }
+  .question:last-of-type { border-bottom: none; }
+  .question-text {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--navy);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .question-num {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--accent);
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 2px 9px;
+    border-radius: 2px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+  }
+  .options { display: flex; flex-direction: column; gap: 10px; }
+  .option-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 18px;
+    border: 2px solid var(--mid);
+    border-radius: 6px;
+    background: var(--light);
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+    color: var(--text);
+    text-align: left;
+    transition: all 0.2s;
+    line-height: 1.4;
+  }
+  .option-btn:hover:not(:disabled) { border-color: var(--blue); background: white; }
+  .option-btn.correct { border-color: var(--green); background: #edfaf3; color: var(--green); }
+  .option-btn.wrong { border-color: #002FA7; background: #edf1ff; color: #002FA7; }
+  .option-btn:disabled { cursor: default; }
+  .opt-letter {
+    width: 26px; height: 26px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid var(--mid);
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 0.75rem;
+    flex-shrink: 0;
+    transition: all 0.2s;
+  }
+  .option-btn.correct .opt-letter { background: var(--green); border-color: var(--green); color: white; }
+  .option-btn.wrong .opt-letter { background: var(--red); border-color: var(--red); color: white; }
+  .feedback {
+    margin-top: 12px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    display: none;
+  }
+  .feedback.show { display: block; }
+  .feedback.ok { background: #edfaf3; border-left: 3px solid var(--green); color: #003d1a; }
+  .feedback.ko { background: #edf1ff; border-left: 3px solid #002FA7; color: #002060; }
+  .quiz-score {
+    text-align: center;
+    padding: 24px;
+    background: var(--light);
+    border-radius: 8px;
+    margin-top: 24px;
+    display: none;
+  }
+  .quiz-score.show { display: block; }
+  .score-val {
+    font-family: Arial, sans-serif;
+    font-size: 3rem;
+    color: var(--navy);
+    font-weight: 900;
+    display: block;
+  }
+  .score-val span { color: var(--accent); }
+  .score-msg { font-size: 0.9rem; color: var(--muted); margin-top: 8px; }
+
+  /* ── SCENARIO ── */
+  .scenario-box {
+    background: var(--navy);
+    color: white;
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .scenario-box::after {
+    content: '"';
+    position: absolute;
+    bottom: -20px; right: 20px;
+    font-size: 120px;
+    font-family: Arial, sans-serif;
+    color: rgba(255,255,255,0.05);
+    line-height: 1;
+    pointer-events: none;
+  }
+  .scenario-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+  .scenario-box p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: rgba(255,255,255,0.85);
+  }
+
+  /* ── TIMELINE ── */
+  .timeline {
+    position: relative;
+    padding-left: 36px;
+    margin: 24px 0;
+  }
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 12px; top: 0; bottom: 0;
+    width: 2px;
+    background: var(--mid);
+  }
+  .tl-item {
+    position: relative;
+    margin-bottom: 24px;
+    background: white;
+    border-radius: 6px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  }
+  .tl-item::before {
+    content: '';
+    position: absolute;
+    left: -30px; top: 20px;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: var(--accent);
+    border: 3px solid white;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .tl-step {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .tl-item h5 {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 6px;
+    font-size: 0.92rem;
+  }
+  .tl-item p {
+    font-size: 0.84rem;
+    color: var(--muted);
+    line-height: 1.55;
+  }
+
+  /* ── BUTTONS ── */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 4px;
+    font-family: Arial, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+  }
+  .btn-primary { background: var(--navy); color: white; }
+  .btn-primary:hover { background: var(--blue); }
+  .btn-accent { background: var(--accent); color: var(--navy); }
+  .btn-accent:hover { background: var(--accent2); }
+  .btn-outline { background: transparent; color: var(--navy); border: 2px solid var(--navy); }
+  .btn-outline:hover { background: var(--navy); color: white; }
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 36px;
+    padding-top: 24px;
+    border-top: 1px solid var(--mid);
+  }
+  .nav-buttons .right { display: flex; gap: 12px; }
+
+  /* ── GLOSSARY ── */
+  .gloss-item {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--mid);
+    font-size: 0.88rem;
+  }
+  .gloss-item:last-child { border-bottom: none; }
+  .gloss-term {
+    font-weight: 700;
+    color: var(--navy);
+    min-width: 120px;
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+  .gloss-def { color: var(--muted); line-height: 1.6; }
+
+  /* ── RESPONSIVE ── */
+  @media(max-width: 640px) {
+    .hero h2 { font-size: 1.8rem; }
+    .header-badge { display: none; }
+    .hero-meta { gap: 20px; }
+    .cards-grid { grid-template-columns: 1fr; }
+    .header-progress { min-width: auto; }
+    .check-table { font-size: 0.78rem; }
+    .check-table th, .check-table td { padding: 8px 10px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
+    <div class="header-badge">FSC 2021–2027 · Molise</div>
+    <div class="header-title">
+      <h1>Ammissibilità della Spesa — Accordo per la Coesione</h1>
+      <p>Modulo di approfondimento · Check List C1 · DPR 66/2025 · Reg. UE 2021/1060</p>
+    </div>
+    <div class="header-progress">
+      <div class="progress-label">Avanzamento</div>
+      <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+      <div class="progress-text" id="progressText">Focus 0 di 5</div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">Modulo di Approfondimento</div>
+  <h2>Verifiche sull'<span>Ammissibilità</span><br>della Spesa FSC</h2>
+  <p class="hero-sub">risorse: Reg. UE 2021/1060 (CPR); DPR n. 66/2025; Check List C1 - ammissibilità della spesa, con focus tematici per controlli Anticipazione / SAL / Saldo</p>
+  <div class="hero-meta">
+    <div class="hero-meta-item"><span class="val">5</span><span class="lbl">Focus Tematici</span></div>
+    <div class="hero-meta-item"><span class="val">9</span><span class="lbl">Tipologie di Spesa</span></div>
+    <div class="hero-meta-item"><span class="val">10</span><span class="lbl">Domande Verifica</span></div>
+    <div class="hero-meta-item"><span class="val">~3h</span><span class="lbl">Durata Stimata</span></div>
+  </div>
+</div>
+
+<!-- CONTAINER -->
+<div class="container">
+
+  <!-- NAV TABS -->
+  <nav class="module-nav" id="moduleNav">
+    <button class="nav-tab active" onclick="showSection(0)"><span class="tab-num">1</span>Fondamenti</button>
+    <button class="nav-tab" onclick="showSection(1)"><span class="tab-num">2</span>Tipologie di Spesa</button>
+    <button class="nav-tab" onclick="showSection(2)"><span class="tab-num">3</span>Processo di Controllo</button>
+    <button class="nav-tab" onclick="showSection(3)"><span class="tab-num">4</span>Casi Pratici</button>
+    <button class="nav-tab" onclick="showSection(4)"><span class="tab-num">5</span>Verifica Apprendimento</button>
+  </nav>
+
+  <!-- =============================== SECTION 0 – FONDAMENTI =============================== -->
+  <section class="section active" id="s0">
+    <div class="section-intro">
+      <h3>Fondamenti dell'Ammissibilità della Spesa</h3>
+      <p>Quadro normativo e principi generali che governano la verifica delle spese nell'ambito dell'Accordo per la Coesione FSC 2021-2027 della Regione Molise</p>
+      <span class="ref">Rif.: SI.GE.CO. Molise v.1.0 giugno 2025 · DPR n.66/2025 · Reg. UE 2021/1060</span>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card accent">
+        <span class="card-icon">⚖️</span>
+        <h4>Principio di Effettività</h4>
+        <p>La spesa deve essere <strong>concretamente sostenuta</strong> e connessa al progetto finanziato. Non sono ammissibili spese simulate, figurative o non quietanzate.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📜</span>
+        <h4>Principio di Legittimità</h4>
+        <p>La spesa deve essere <strong>conforme alla normativa comunitaria e nazionale</strong>: D.Lgs. 36/2023 (Codice Appalti), normativa aiuti di Stato, DPR 66/2025, Reg. UE 2021/1060.</p>
+      </div>
+      <div class="card green">
+        <span class="card-icon">📄</span>
+        <h4>Principio della Prova Documentale</h4>
+        <p>La spesa deve essere <strong>comprovata da giustificativi</strong> (fatture analitiche, mandati quietanzati, atti di liquidazione) o documenti di natura probatoria equivalente.</p>
+      </div>
+      <div class="card red">
+        <span class="card-icon">🚫</span>
+        <h4>Divieto di Doppio Finanziamento</h4>
+        <p>Non sono ammissibili spese già finanziate attraverso <strong>altre fonti pubbliche</strong>, salvo che il progetto non preveda espressamente la pluralità di fonti, nei limiti della quota FSC.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">📅</span>
+        <h4>Ammissibilità Temporale</h4>
+        <p>Le spese devono essere sostenute <strong>durante il periodo di ammissibilità</strong> indicato nell'atto di concessione del finanziamento. L'avvio anticipato senza autorizzazione pregiudica l'ammissibilità.</p>
+      </div>
+      <div class="card accent">
+        <span class="card-icon">🔗</span>
+        <h4>Pertinenza e Imputabilità</h4>
+        <p>Ogni spesa deve essere <strong>pertinente e imputabile con certezza</strong> all'intervento finanziato, coerente con gli obiettivi dell'Accordo e tracciabile attraverso il CUP di progetto.</p>
+      </div>
+    </div>
+
+    <!-- Struttura check list -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">A</div>
+        <div class="focus-title">Struttura della Check List C1 — AMM_SPESA: Dati Identificativi e Anagrafica</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Dati minimi obbligatori nella scheda di controllo</h5>
+        <ul class="rule-list">
+          <li>Ambito Tematico e Linea di intervento/azione (come da Allegato A1 all'Accordo)</li>
+          <li>Titolo del progetto e soggetto attuatore/beneficiario</li>
+          <li>CUP (Codice Unico di Progetto) e CIG della procedura di gara</li>
+          <li>Modalità di attuazione: a titolarità regionale o a regia</li>
+          <li>Estremi atto di concessione del finanziamento</li>
+          <li>Costo totale del progetto e quota a carico FSC 2021-2027</li>
+          <li>Periodo di ammissibilità della spesa (da atto di concessione)</li>
+          <li>Tipologia di intervento/macroprocesso (opere pubbliche / servizi e forniture / aiuti / incarichi)</li>
+          <li>Stato attuazione: da avviare / in corso / concluso</li>
+        </ul>
+        <h5>Anagrafica della spesa</h5>
+        <ul class="rule-list">
+          <li>Importo totale concesso</li>
+          <li>Importo spesa precedentemente controllata (SAL precedenti)</li>
+          <li>Importo spesa oggetto del presente controllo</li>
+          <li>Causale: specificare se <strong>Anticipazione / SAL / Saldo</strong></li>
+          <li>Luogo di archiviazione della documentazione relativa alla spesa</li>
+        </ul>
+        <div class="alert-box warning">
+          <span class="alert-icon">⚠️</span>
+          <div>La dichiarazione di assenza di conflitto di interesse da parte dell'incaricato del controllo (art. 61, Reg. UE 1046/2018) è presupposto inderogabile della check list. L'incaricato si impegna alla riservatezza ai sensi del D.P.R. n.445/2000.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">B</div>
+        <div class="focus-title">Controlli Generali Preliminari — Requisiti Beneficiario e Conformità Normativa</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <ul class="rule-list">
+          <li>Il beneficiario possiede i requisiti previsti dal Bando (visura camerale, iscrizione registri, ecc.)?</li>
+          <li>Le attività eseguite non rientrano tra quelle espressamente escluse dal Bando/disciplinare?</li>
+          <li>È presente tutta la documentazione prevista nel disciplinare di concessione e nel SI.GE.CO.?</li>
+          <li>Tutta la spesa dichiarata è fondata su contratti aventi valore legale o accordi e/o documenti?</li>
+          <li>Tutta la spesa dichiarata è supportata da un'asseverazione rilasciata da professionista abilitato?</li>
+          <li>L'asseverazione fa riferimento allo specifico finanziamento e al CUP?</li>
+          <li>I documenti contabili riportano: oggetto della prestazione, importo, riferimento al progetto, CUP?</li>
+          <li>È stata rispettata la conformità delle spese alle norme comunitarie, nazionali e regionali e al Bando?</li>
+          <li>Nel caso di costi semplificati, è stato rispettato quanto stabilito nel bando?</li>
+          <li>La spesa è stata effettivamente sostenuta durante il periodo di ammissibilità?</li>
+          <li>La spesa, sommata alle precedenti, rientra nel limite dell'importo contrattuale approvato?</li>
+          <li>In caso di anticipazione: è stata acquisita la fidejussione bancaria/assicurativa pari all'anticipo?</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <div></div>
+      <div class="right">
+        <button class="btn btn-accent" onclick="showSection(1)">Avanti: Tipologie di Spesa ›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== SECTION 1 – TIPOLOGIE DI SPESA =============================== -->
+  <section class="section" id="s1">
+    <div class="section-intro">
+      <h3>Focus 2 — Tipologie Particolari di Spesa</h3>
+      <p>Il DPR n. 66/2025 e il Reg. UE 2021/1060 disciplinano in modo specifico alcune categorie di spesa che richiedono verifiche aggiuntive rispetto ai controlli generali. La check list C1 dedica una sezione apposita a ciascuna di esse.</p>
+      <span class="ref">Rif.: DPR n.66 del 10/03/2025 · Reg. UE 2021/1060, artt. 64, 67, 68, 81 · Check List C1_AMM_SPESA Molise</span>
+    </div>
+
+    <!-- IVA -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">1</div>
+        <div class="focus-title">IVA, Spese Legali, Oneri e Imposte</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Condizioni di ammissibilità</h5>
+        <ul class="rule-list">
+          <li><strong>IVA</strong>: ammissibile nei casi e nei limiti dell'art. 64, par. 1, lett. c), punti i)–iv), Reg. UE 2021/1060 e art. 1, comma 2, DPR 66/2025, fermo restando il rispetto della normativa sugli aiuti di Stato. Non è ammissibile se recuperabile dal beneficiario.</li>
+          <li><strong>Imposta di registro</strong>: ammissibile se afferente a un'operazione finanziata.</li>
+          <li><strong>Tributi, oneri fiscali, previdenziali e assicurativi</strong>: ammissibili nel limite in cui non siano recuperabili dal beneficiario, anche soggetto pubblico.</li>
+          <li><strong>Spese legali e notarili</strong>, perizie tecniche/finanziarie, spese di contabilità o audit: ammissibili se <em>direttamente connesse</em> all'operazione e necessarie per la sua preparazione o realizzazione.</li>
+          <li><strong>Costi bancari</strong>: ammissibili se l'operazione richiede l'apertura di conti dedicati, incluse le commissioni.</li>
+          <li><strong>Garanzie bancarie/assicurative</strong>: ammissibili se previste dalla disciplina vigente o da prescrizioni del RUA.</li>
+        </ul>
+        <div class="alert-box warning">
+          <span class="alert-icon">⚠️</span>
+          <div>L'IVA recuperabile (regime ordinario, pro-rata, split payment con rimborso) non è mai ammissibile come spesa FSC, indipendentemente dal soggetto (pubblico o privato).</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Terreni ed Edifici -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">2</div>
+        <div class="focus-title">Acquisto di Terreni ed Edifici</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Acquisto di Terreni — Condizioni cumulative</h5>
+        <ul class="rule-list">
+          <li>Il valore del terreno non supera il <strong>10% della spesa totale ammissibile</strong> dell'operazione (15% per siti in degrado o ex-aree industriali).</li>
+          <li>È presentata una <strong>perizia giurata</strong> di valutatore qualificato, indipendente o autorizzato, che attesta il valore di mercato.</li>
+        </ul>
+        <h5>Acquisto di Edifici già Costruiti — Condizioni cumulative</h5>
+        <ul class="rule-list">
+          <li>Perizia giurata di valutatore qualificato che attesta il valore di mercato e la conformità urbanistica/edilizia, nonché i vincoli paesaggistici.</li>
+          <li>L'immobile <strong>non ha fruito di finanziamenti pubblici (nazionali o europei) nei 5 anni precedenti</strong>.</li>
+          <li>L'immobile è utilizzato per la destinazione e per il periodo stabiliti dal RUA.</li>
+          <li>L'edificio è utilizzato conformemente alle finalità dell'operazione.</li>
+        </ul>
+        <div class="alert-box danger">
+          <span class="alert-icon">🚫</span>
+          <div>La mancanza della perizia giurata di parte è una irregolarità che rende l'intera spesa di acquisto non ammissibile, indipendentemente dalla congruità del prezzo pagato.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Materiale Usato -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">3</div>
+        <div class="focus-title">Acquisto di Materiale Usato</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <ul class="rule-list">
+          <li>Il venditore rilascia <strong>dichiarazione attestante la provenienza esatta</strong> del materiale e che lo stesso, nei 5 anni precedenti (3 anni per PMI, previa valutazione del RUA), non ha beneficiato di contributi nazionali o europei.</li>
+          <li>Il prezzo del materiale usato <strong>non è superiore al valore di mercato</strong> ed è inferiore al costo di materiale simile nuovo.</li>
+          <li>Le caratteristiche tecniche del materiale sono <strong>adeguate alle esigenze dell'operazione</strong> e conformi alle norme e standard pertinenti.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Ammortamenti -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">4</div>
+        <div class="focus-title">Ammortamenti e Locazione Finanziaria (Leasing)</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Ammortamenti</h5>
+        <ul class="rule-list">
+          <li>Ammissibili le spese di ammortamento di beni strumentali all'operazione, <strong>per i quali non è stato effettuato alcun pagamento giustificato da fatture</strong>.</li>
+          <li>Calcolati conformemente alla normativa vigente (art. 67, par. 2, Reg. UE 2021/1060; art. 69, par. 2, Reg. 1303/2013).</li>
+          <li>I beni ammortizzati non devono essere stati acquistati con contributi pubblici.</li>
+        </ul>
+        <h5>Locazione Finanziaria (Leasing)</h5>
+        <ul class="rule-list">
+          <li>Ammissibile alle condizioni dell'art. 20, DPR n. 66/2025.</li>
+          <li>La locazione semplice o il noleggio, se direttamente connessi all'operazione, sono parimenti ammissibili.</li>
+          <li>Verificare: elementi del contratto di leasing rispetto al Bando, date e modalità di pagamento, assenza di doppio finanziamento sul medesimo bene.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Credito d'Imposta e Strumenti Finanziari -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">5</div>
+        <div class="focus-title">Credito d'Imposta, Esonero Contributivo e Strumenti Finanziari</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Credito d'Imposta / Esonero Contributivo</h5>
+        <ul class="rule-list">
+          <li>Ammissibili se previsti e disciplinati da <strong>specifiche disposizioni normative nazionali</strong>.</li>
+          <li>Concessi per sostenere misure finalizzate agli obiettivi dell'Accordo per la Coesione.</li>
+          <li>La concessione rispetta la normativa sugli aiuti di Stato, laddove applicabile.</li>
+          <li>L'importo corrispondente deve essere riconosciuto ed effettivamente utilizzato.</li>
+        </ul>
+        <h5>Strumenti Finanziari</h5>
+        <ul class="rule-list">
+          <li>Ammissibili alle condizioni degli artt. 58–62, 68, 81 e 92 del Reg. UE 2021/1060.</li>
+          <li>Utilizzati per contribuire agli obiettivi specifici della priorità.</li>
+          <li>Se rilevanti, si applicano anche i regolamenti di cui all'art. 1, comma 1, DPR 66/2025.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Aiuti alle Imprese -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">6</div>
+        <div class="focus-title">Aiuti alle Imprese — Verifiche Specifiche</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <ul class="rule-list">
+          <li>Regolarità firma digitale del Legale Rappresentante / soggetto titolato alla firma.</li>
+          <li>L'importo dell'investimento ammissibile è ≥ alla soglia minima prevista dal Bando (in fase di acconto).</li>
+          <li>L'importo finale a rendicontazione non è inferiore alla soglia minima del Bando (in fase di saldo).</li>
+          <li>Verifica cumulo con altri contributi ottenuti <em>antecedentemente</em> alla decisione di concessione.</li>
+          <li>Per i beni/servizi agevolati non sono state ottenute altre agevolazioni (assenza di doppio finanziamento).</li>
+          <li>Rispetto delle percentuali delle specifiche voci di spesa previste dal Bando.</li>
+          <li>Verifica della <strong>dichiarazione relativa all'effetto Deggendorf</strong> (assenza di aiuti incompatibili pendenti).</li>
+          <li>In caso di "de minimis": verifica della retroattività massima dei titoli di spesa come da Bando.</li>
+          <li>In caso di Leasing: verifica elementi contrattuali e modalità di pagamento rispetto al Bando.</li>
+          <li>Verifica della regolarità contributiva (DURC).</li>
+          <li>Verifica Antimafia (documentazione antimafia).</li>
+          <li>Verifica antiriciclaggio.</li>
+        </ul>
+        <div class="alert-box danger">
+          <span class="alert-icon">🚫</span>
+          <div><strong>Clausola Deggendorf</strong>: prima dell'erogazione di qualsiasi aiuto, il beneficiario deve dichiarare di non aver ricevuto aiuti di Stato dichiarati incompatibili dalla Commissione europea e non ancora rimborsati (art. 1, Reg. UE 651/2014 e Reg. UE 2023/1315).</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-outline" onclick="showSection(0)">‹ Fondamenti</button>
+      <div class="right">
+        <button class="btn btn-accent" onclick="showSection(2)">Avanti: Processo di Controllo ›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== SECTION 2 – PROCESSO =============================== -->
+  <section class="section" id="s2">
+    <div class="section-intro">
+      <h3>Focus 3 — Il Processo di Controllo sull'Ammissibilità della Spesa</h3>
+      <p>Il controllo di ammissibilità della spesa si colloca nel sistema di verifiche di primo livello del SI.GE.CO. ed è svolto dal Servizio Rendicontazione, Controllo e Vigilanza. Coinvolge RdA, ARDAS e RUA in fasi distinte e sequenziali.</p>
+      <span class="ref">Rif.: SI.GE.CO. Molise v.1.0 — Sezione "Verifiche amministrative su base documentale" · DGR n. 484/2024</span>
+    </div>
+
+    <h4 style="font-family:Arial,sans-serif; color:var(--navy); margin-bottom:16px; font-size:1.1rem;">Flusso del Controllo: dalla Richiesta di Erogazione all'Esito</h4>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-step">Fase 1</div>
+        <h5>Richiesta di erogazione dal soggetto attuatore/beneficiario</h5>
+        <p>Il soggetto trasmette al RdA la richiesta di anticipazione, SAL o saldo, unitamente alla "scheda di rendicontazione della spesa quietanzata" e alla documentazione giustificativa (fatture analitiche, mandati quietanzati, atti di liquidazione, eventuale relazione RUP con documentazione fotografica).</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-step">Fase 2</div>
+        <h5>Check di autocontrollo del soggetto attuatore/beneficiario</h5>
+        <p>Contestualmente, il beneficiario trasmette la check di autocontrollo (C2) pertinente alla tipologia di intervento (C2_AUTOC_AFF_LAV, C2_AUTOC_INCPROF_SERV_FORN, C2_AUTOC_INCUNIV, C2_AUTOC_AIUTI, C2_AUTOC_CONV).</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-step">Fase 3</div>
+        <h5>Controllo del Servizio Rendicontazione, Controllo e Vigilanza</h5>
+        <p>Il Servizio, ricevuta la documentazione dal RdA, svolge la verifica di ammissibilità della spesa attraverso la check list C1_CHECK_AMM_SPESA. Il controllo si estende al 100% delle spese e al 100% degli interventi FSC.</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-step">Fase 4</div>
+        <h5>Comunicazione esiti e adozione provvedimenti RdA</h5>
+        <p>Il Servizio comunica l'esito (positivo / parzialmente positivo / negativo) al soggetto attuatore/beneficiario, al RdA e al RUA. In caso di esito non positivo, dopo contraddittorio, il beneficiario è tenuto ad adeguare le procedure. Il RdA adotta i provvedimenti conseguenti (liquidazione, sospensione o revoca).</p>
+      </div>
+      <div class="tl-item">
+        <div class="tl-step">Fase 5</div>
+        <h5>Attestazione di spesa RdA e dichiarazione ARDAS</h5>
+        <p>Il RdA elabora e trasmette al RUA l'attestazione di spesa periodica. Il RUA predispone l'attestazione cumulata. L'ARDAS, svolte le proprie verifiche, elabora la dichiarazione di ammissibilità della spesa e inoltra le richieste di trasferimento FSC al DPCoeS.</p>
+      </div>
+    </div>
+
+    <!-- ESITO CHECK LIST -->
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)">
+        <div class="focus-num">E</div>
+        <div class="focus-title">Struttura degli Esiti e Rettifiche Finanziarie</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Esiti previsti dalla Check List C1</h5>
+        <ul class="rule-list">
+          <li><strong>Positivo</strong>: tutte le spese controllate sono ammissibili; nessuna irregolarità rilevata o eventuali rilievi si sono risolti nel contraddittorio.</li>
+          <li><strong>Parzialmente Positivo</strong>: parte delle spese dichiarate sono ammissibili; è presente una rettifica finanziaria parziale o importi sospesi in attesa di contraddittorio.</li>
+          <li><strong>Negativo</strong>: irregolarità rilevanti non sanabili; si procede alla rettifica finanziaria integrale o parziale e alla revoca del finanziamento per le quote non ammissibili.</li>
+        </ul>
+        <h5>Campi quantitativi dell'esito</h5>
+        <ul class="rule-list">
+          <li><strong>Importo controllato</strong> (€): totale della spesa oggetto del presente controllo.</li>
+          <li><strong>Importo ammissibile</strong> (€): quota ritenuta conforme e ammissibile a finanziamento FSC.</li>
+          <li><strong>Importo non ammissibile</strong> (€): quota da decurtare dalla rendicontazione.</li>
+          <li><strong>Importo sospeso</strong> (€): quota in attesa di esito del contraddittorio.</li>
+          <li><strong>Eventuale rettifica finanziaria</strong> (€): derivante da verifica amministrativa sulla procedura.</li>
+        </ul>
+        <h5>Irregolarità — Elementi da documentare</h5>
+        <ul class="rule-list">
+          <li>Sintesi delle criticità emerse.</li>
+          <li>Descrizione analitica dell'irregolarità.</li>
+          <li>Documento da cui si evince l'irregolarità.</li>
+          <li>Impatto finanziario dell'irregolarità (€).</li>
+        </ul>
+        <div class="alert-box success">
+          <span class="alert-icon">✅</span>
+          <div>In caso di importi non ammissibili già rimborsati in pagamenti intermedi precedenti, il relativo importo va detratto dai pagamenti successivi, senza procedere a recupero separato, salvo diversa indicazione dell'ARDAS.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TABLE: Documentazione per tipologia -->
+    <h4 style="font-family:Arial,sans-serif; color:var(--navy); margin: 28px 0 14px; font-size:1.1rem;">Documentazione Richiesta per Tipologia di Erogazione</h4>
+    <table class="check-table">
+      <thead>
+        <tr>
+          <th>Documento richiesto</th>
+          <th>Anticipazione</th>
+          <th>SAL / Erogazione Parziale</th>
+          <th>Saldo Finale</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Scheda di rendicontazione spesa quietanzata</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Fidejussione bancaria/assicurativa</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td>–</td>
+          <td>–</td>
+        </tr>
+        <tr>
+          <td>Copie fatture analitiche/documenti probatori</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Mandati quietanzati di pagamento</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Provvedimenti di liquidazione</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Relazione RUP + documentazione fotografica</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span> (OO.PP.)</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Certificato di ultimazione lavori</td>
+          <td>–</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Stato finale dei lavori</td>
+          <td>–</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Certificato di collaudo / regolare esecuzione</td>
+          <td>–</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Check di autocontrollo C2 pertinente</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Documentazione gara (atti affidamento)</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+          <td><span class="badge mandatory">Obbligatorio</span></td>
+        </tr>
+        <tr>
+          <td>Dettaglio analitico spesa con estremi quietanze (intero intervento)</td>
+          <td>–</td>
+          <td>–</td>
+          <td><span class="badge mandatory">Solo al Saldo</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="nav-buttons">
+      <button class="btn btn-outline" onclick="showSection(1)">‹ Tipologie di Spesa</button>
+      <div class="right">
+        <button class="btn btn-accent" onclick="showSection(3)">Avanti: Casi Pratici ›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== SECTION 3 – CASI PRATICI =============================== -->
+  <section class="section" id="s3">
+    <div class="section-intro">
+      <h3>Focus 4 — Casi Pratici: Analisi di Scenari</h3>
+      <p>Applicazione concreta dei principi di ammissibilità a situazioni frequenti nell'attuazione degli interventi FSC 2021-2027 della Regione Molise. Ogni scenario richiede l'identificazione dell'irregolarità e la risposta corretta.</p>
+      <span class="ref">Rif.: Check List C1_AMM_SPESA · SIGECO Molise v.1.0 · DPR 66/2025</span>
+    </div>
+
+    <!-- Scenario 1 -->
+    <div class="scenario-box">
+      <div class="scenario-label">📋 Scenario A — Opere Pubbliche a Regia Regionale</div>
+      <p>Il Comune di X, soggetto attuatore di un intervento di messa in sicurezza viabilità, presenta un SAL con fatture per €180.000. Tra le spese è inclusa l'IVA al 22% pari a €32.720. Il Comune è soggetto a split payment e l'IVA è versata direttamente all'Erario dallo stesso, senza alcuna possibilità di recupero. La fattura riporta il CUP del progetto.</p>
+    </div>
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)" style="background:#003d1a;">
+        <div class="focus-num" style="background:var(--green);">A</div>
+        <div class="focus-title">Analisi dello Scenario A</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Elementi da verificare</h5>
+        <ul class="rule-list">
+          <li>Lo split payment non consente il recupero dell'IVA da parte del Comune: l'IVA è un costo definitivamente sostenuto.</li>
+          <li>Ai sensi dell'art. 64, par. 1, lett. c), Reg. UE 2021/1060 e art. 1, comma 2, DPR 66/2025, l'IVA è ammissibile quando non sia recuperabile dal beneficiario — anche soggetto pubblico.</li>
+          <li>La fattura riporta il CUP: requisito formale soddisfatto.</li>
+          <li>La spesa è stata effettivamente sostenuta (mandato quietanzato da verificare).</li>
+        </ul>
+        <div class="alert-box success">
+          <span class="alert-icon">✅</span>
+          <div><strong>Esito:</strong> L'IVA di €32.720 è ammissibile come spesa FSC, a condizione che si produca documentazione attestante l'assenza di recuperabilità e che il mandato quietanzato dimostri l'avvenuto pagamento. Il controllore deve acquisire una dichiarazione del responsabile finanziario del Comune.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenario 2 -->
+    <div class="scenario-box">
+      <div class="scenario-label">📋 Scenario B — Acquisto di Bene Immobile</div>
+      <p>Un soggetto attuatore presenta in fase di saldo la spesa per l'acquisto di un edificio da destinare a centro diurno per anziani (intervento FSCRI_RI_3117). Il prezzo di acquisto è di €450.000. Non è allegata alcuna perizia di stima. Il soggetto dichiara che l'immobile è stato acquistato 3 anni prima con mutuo bancario e che non aveva mai ricevuto contributi pubblici.</p>
+    </div>
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)" style="background:#002060;">
+        <div class="focus-num" style="background:#002FA7;">B</div>
+        <div class="focus-title">Analisi dello Scenario B</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Irregolarità rilevate</h5>
+        <ul class="rule-list">
+          <li><strong>Assenza di perizia giurata</strong>: è condizione necessaria e non derogabile per l'ammissibilità dell'acquisto di edificio (DPR 66/2025). La sola dichiarazione del soggetto non sostituisce la perizia di valutatore qualificato e indipendente.</li>
+          <li><strong>Verifica "no finanziamento pubblico nei 5 anni precedenti"</strong>: la dichiarazione del soggetto che non ha mai ricevuto contributi è necessaria ma non sufficiente; occorre documentazione (es. visura ipocatastale per gravami, attestazione dell'ente locale).</li>
+          <li>L'acquisto 3 anni prima rientra nel quinquennio: il vincolo temporale deve essere verificato con atti certi.</li>
+        </ul>
+        <div class="alert-box danger">
+          <span class="alert-icon">🚫</span>
+          <div><strong>Esito:</strong> La spesa di €450.000 è <strong>non ammissibile</strong> allo stato attuale per assenza della perizia giurata. Il Servizio Rendicontazione avvia il contraddittorio: il soggetto ha 30 giorni per produrre la perizia di parte redatta da valutatore qualificato indipendente. In assenza di perizia, la spesa viene decurtata integralmente dal SAL/Saldo.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scenario 3 -->
+    <div class="scenario-box">
+      <div class="scenario-label">📋 Scenario C — Aiuto alle Imprese (De Minimis)</div>
+      <p>Un'impresa beneficiaria di un aiuto "de minimis" nell'ambito della Linea B43C927F presenta la richiesta di saldo. Tra i documenti, manca la dichiarazione relativa all'effetto Deggendorf. L'importo rendicontato è €85.000, superiore alla soglia minima del Bando (€50.000). La regolarità contributiva (DURC) risulta scaduta di 15 giorni alla data di erogazione.</p>
+    </div>
+    <div class="focus-box">
+      <div class="focus-header" onclick="toggleFocus(this)" style="background:#002FA7;">
+        <div class="focus-num" style="background:#5B9BD5;">C</div>
+        <div class="focus-title">Analisi dello Scenario C</div>
+        <div class="focus-arrow">▼</div>
+      </div>
+      <div class="focus-body">
+        <h5>Criticità da rilevare</h5>
+        <ul class="rule-list">
+          <li><strong>Mancanza dichiarazione Deggendorf</strong>: è una verifica obbligatoria della check list C1 per gli aiuti. Senza questa dichiarazione non si può procedere all'erogazione.</li>
+          <li><strong>DURC scaduto</strong>: la regolarità contributiva deve sussistere alla data di erogazione, non alla data di domanda. Un DURC scaduto di 15 giorni comporta la sospensione del pagamento fino al rinnovo.</li>
+          <li><strong>Importo sopra soglia</strong>: elemento positivo, la verifica è soddisfatta.</li>
+          <li>Per il "de minimis": verificare cumulativamente che il totale degli aiuti de minimis nei 3 esercizi finanziari precedenti non superi il massimale del Reg. UE 2023/2831 (€300.000).</li>
+        </ul>
+        <div class="alert-box warning">
+          <span class="alert-icon">⚠️</span>
+          <div><strong>Esito Parzialmente Positivo:</strong> La spesa è documentata e ammissibile sotto il profilo dell'investimento. L'erogazione è sospesa in attesa di: 1) produzione della dichiarazione Deggendorf firmata dal legale rappresentante; 2) DURC in corso di validità. Nessuna rettifica finanziaria sull'importo se le irregolarità formali vengono sanate.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-outline" onclick="showSection(2)">‹ Processo di Controllo</button>
+      <div class="right">
+        <button class="btn btn-accent" onclick="showSection(4)">Avanti: Verifica Apprendimento ›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =============================== SECTION 4 – QUIZ =============================== -->
+  <section class="section" id="s4">
+    <div class="section-intro">
+      <h3>Focus 5 — Verifica dell'Apprendimento</h3>
+      <p>10 domande a risposta multipla derivate direttamente dalla Check List C1_AMM_SPESA del SI.GE.CO. Molise e dalla normativa di riferimento. Per ogni domanda è disponibile un feedback argomentato.</p>
+      <span class="ref">Modalità di verifica: questionario multiple-choice con feedback immediato</span>
+    </div>
+
+    <div class="quiz-section">
+      <h3>Questionario — Ammissibilità della Spesa FSC 2021-2027</h3>
+      <p>Seleziona la risposta corretta. Leggi attentamente ogni opzione prima di scegliere.</p>
+
+      <!-- Q1 -->
+      <div class="question" id="q1">
+        <div class="question-text"><span class="question-num">1</span>Qual è il limite percentuale massimo per l'acquisto di terreni rispetto alla spesa totale ammissibile di un'operazione FSC (in condizioni ordinarie)?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q1',false,'A')"><span class="opt-letter">A</span>5% della spesa totale ammissibile</button>
+          <button class="option-btn" onclick="answer(this,'q1',true,'B')"><span class="opt-letter">B</span>10% della spesa totale ammissibile (15% per siti in degrado o ex-aree industriali)</button>
+          <button class="option-btn" onclick="answer(this,'q1',false,'C')"><span class="opt-letter">C</span>20% della spesa totale ammissibile</button>
+          <button class="option-btn" onclick="answer(this,'q1',false,'D')"><span class="opt-letter">D</span>Nessun limite, è sempre ammissibile con perizia giurata</button>
+        </div>
+        <div class="feedback" id="fb-q1"></div>
+      </div>
+
+      <!-- Q2 -->
+      <div class="question" id="q2">
+        <div class="question-text"><span class="question-num">2</span>Il soggetto attuatore chiede un'anticipazione. Quale documento è OBBLIGATORIO allegare alla richiesta, specificamente per questa causale?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q2',false,'A')"><span class="opt-letter">A</span>Certificato di collaudo provvisorio</button>
+          <button class="option-btn" onclick="answer(this,'q2',false,'B')"><span class="opt-letter">B</span>Stato finale dei lavori</button>
+          <button class="option-btn" onclick="answer(this,'q2',true,'C')"><span class="opt-letter">C</span>Fidejussione bancaria o assicurativa di importo pari all'anticipazione</button>
+          <button class="option-btn" onclick="answer(this,'q2',false,'D')"><span class="opt-letter">D</span>Relazione RUP con documentazione fotografica</button>
+        </div>
+        <div class="feedback" id="fb-q2"></div>
+      </div>
+
+      <!-- Q3 -->
+      <div class="question" id="q3">
+        <div class="question-text"><span class="question-num">3</span>L'IVA sostenuta da un ente pubblico soggetto a split payment è ammissibile come spesa FSC?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q3',false,'A')"><span class="opt-letter">A</span>No, l'IVA degli enti pubblici non è mai ammissibile</button>
+          <button class="option-btn" onclick="answer(this,'q3',true,'B')"><span class="opt-letter">B</span>Sì, se non è recuperabile dal beneficiario, anche se soggetto pubblico</button>
+          <button class="option-btn" onclick="answer(this,'q3',false,'C')"><span class="opt-letter">C</span>Sì, sempre e integralmente, per tutti i soggetti pubblici</button>
+          <button class="option-btn" onclick="answer(this,'q3',false,'D')"><span class="opt-letter">D</span>Solo se inferiore al 10% della spesa totale rendicontata</button>
+        </div>
+        <div class="feedback" id="fb-q3"></div>
+      </div>
+
+      <!-- Q4 -->
+      <div class="question" id="q4">
+        <div class="question-text"><span class="question-num">4</span>Qual è il termine di conservazione della documentazione di progetto dopo la chiusura dell'intervento, previsto dal SI.GE.CO. Molise?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q4',false,'A')"><span class="opt-letter">A</span>3 anni</button>
+          <button class="option-btn" onclick="answer(this,'q4',false,'B')"><span class="opt-letter">B</span>10 anni</button>
+          <button class="option-btn" onclick="answer(this,'q4',true,'C')"><span class="opt-letter">C</span>5 anni successivi alla chiusura di ogni singolo intervento</button>
+          <button class="option-btn" onclick="answer(this,'q4',false,'D')"><span class="opt-letter">D</span>7 anni dalla data dell'ultimo pagamento</button>
+        </div>
+        <div class="feedback" id="fb-q4"></div>
+      </div>
+
+      <!-- Q5 -->
+      <div class="question" id="q5">
+        <div class="question-text"><span class="question-num">5</span>Ai sensi del D.Lgs. n. 36/2023 (Codice dei contratti pubblici), qual è la soglia massima per il ricorso all'affidamento diretto di servizi e forniture senza obbligo di consultazione di più operatori?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q5',false,'A')"><span class="opt-letter">A</span>€ 40.000 — affidamento diretto senza alcuna motivazione specifica</button>
+          <button class="option-btn" onclick="answer(this,'q5',true,'B')"><span class="opt-letter">B</span>€ 140.000 — affidamento diretto con adeguata motivazione; da € 140.000 a € 221.000 procedura negoziata con almeno 5 operatori</button>
+          <button class="option-btn" onclick="answer(this,'q5',false,'C')"><span class="opt-letter">C</span>€ 75.000 — affidamento diretto; oltre tale soglia obbligo di gara aperta</button>
+          <button class="option-btn" onclick="answer(this,'q5',false,'D')"><span class="opt-letter">D</span>€ 221.000 — coincidente con la soglia europea per i contratti pubblici di servizi</button>
+        </div>
+        <div class="feedback" id="fb-q5"></div>
+      </div>
+
+      <!-- Q6 -->
+      <div class="question" id="q6">
+        <div class="question-text"><span class="question-num">6</span>La "Clausola Deggendorf" richiede che il beneficiario dichiari:</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q6',false,'A')"><span class="opt-letter">A</span>Di non aver ricevuto finanziamenti privati nel corso degli ultimi 3 anni</button>
+          <button class="option-btn" onclick="answer(this,'q6',false,'B')"><span class="opt-letter">B</span>Che l'investimento non supera le soglie de minimis del Reg. UE 2023/2831</button>
+          <button class="option-btn" onclick="answer(this,'q6',true,'C')"><span class="opt-letter">C</span>Di non aver ricevuto aiuti di Stato dichiarati incompatibili dalla Commissione europea e non ancora rimborsati</button>
+          <button class="option-btn" onclick="answer(this,'q6',false,'D')"><span class="opt-letter">D</span>Che l'impresa non si trova in stato di difficoltà ai sensi del Reg. GBER 651/2014</button>
+        </div>
+        <div class="feedback" id="fb-q6"></div>
+      </div>
+
+      <!-- Q7 -->
+      <div class="question" id="q7">
+        <div class="question-text"><span class="question-num">7</span>I controlli di ammissibilità della spesa si estendono a quale percentuale delle spese rendicontate nell'Accordo per la Coesione Molise?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q7',false,'A')"><span class="opt-letter">A</span>Almeno il 5% (campione statistico)</button>
+          <button class="option-btn" onclick="answer(this,'q7',false,'B')"><span class="opt-letter">B</span>Almeno il 30% (campione minimo obbligatorio)</button>
+          <button class="option-btn" onclick="answer(this,'q7',false,'C')"><span class="opt-letter">C</span>Almeno il 70% (soglia di rappresentatività)</button>
+          <button class="option-btn" onclick="answer(this,'q7',true,'D')"><span class="opt-letter">D</span>Il 100% delle spese rendicontate e il 100% degli interventi FSC</button>
+        </div>
+        <div class="feedback" id="fb-q7"></div>
+      </div>
+
+      <!-- Q8 -->
+      <div class="question" id="q8">
+        <div class="question-text"><span class="question-num">8</span>In materia di rendicontazione dei costi del personale, quale delle seguenti modalità è prevista dal DPR n. 66/2025 come opzione di semplificazione (Opzione di Costo Semplificato – SCO)?</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q8',false,'A')"><span class="opt-letter">A</span>Rimborso esclusivo su base di costi reali documentati con cedolini e F24, senza possibilità di semplificazione</button>
+          <button class="option-btn" onclick="answer(this,'q8',false,'B')"><span class="opt-letter">B</span>Tasso forfettario fino al 20% sui costi diretti ammissibili per coprire i costi del personale indiretto</button>
+          <button class="option-btn" onclick="answer(this,'q8',true,'C')"><span class="opt-letter">C</span>Tasso orario standard calcolato dividendo i costi annui lordi del personale per 1.720 ore annue (o le ore effettive documentate)</button>
+          <button class="option-btn" onclick="answer(this,'q8',false,'D')"><span class="opt-letter">D</span>Forfait mensile fisso pari all'80% della retribuzione lorda contrattuale, indipendentemente dalle ore lavorate sul progetto</button>
+        </div>
+        <div class="feedback" id="fb-q8"></div>
+      </div>
+
+      <!-- Q9 -->
+      <div class="question" id="q9">
+        <div class="question-text"><span class="question-num">9</span>Il dettaglio analitico della spesa con gli estremi delle quietanze di pagamento dell'intero intervento è un documento richiesto:</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q9',false,'A')"><span class="opt-letter">A</span>In tutte le fasi: anticipazione, SAL e saldo</button>
+          <button class="option-btn" onclick="answer(this,'q9',false,'B')"><span class="opt-letter">B</span>Solo in fase di anticipazione, come garanzia</button>
+          <button class="option-btn" onclick="answer(this,'q9',false,'C')"><span class="opt-letter">C</span>A partire dal secondo SAL</button>
+          <button class="option-btn" onclick="answer(this,'q9',true,'D')"><span class="opt-letter">D</span>Esclusivamente in fase di saldo finale</button>
+        </div>
+        <div class="feedback" id="fb-q9"></div>
+      </div>
+
+      <!-- Q10 -->
+      <div class="question" id="q10">
+        <div class="question-text"><span class="question-num">10</span>In caso di esito parzialmente positivo del controllo di ammissibilità, gli importi non ammissibili già rimborsati in pagamenti intermedi precedenti:</div>
+        <div class="options">
+          <button class="option-btn" onclick="answer(this,'q10',false,'A')"><span class="opt-letter">A</span>Vengono recuperati con procedura di ingiunzione immediata</button>
+          <button class="option-btn" onclick="answer(this,'q10',true,'B')"><span class="opt-letter">B</span>Vengono detratti dai pagamenti a rimborso successivi all'accertamento</button>
+          <button class="option-btn" onclick="answer(this,'q10',false,'C')"><span class="opt-letter">C</span>Restano a carico del RdA che li ha autorizzati</button>
+          <button class="option-btn" onclick="answer(this,'q10',false,'D')"><span class="opt-letter">D</span>Vengono comunicati alla Corte dei Conti entro 30 giorni</button>
+        </div>
+        <div class="feedback" id="fb-q10"></div>
+      </div>
+
+      <div class="quiz-score" id="quizScore">
+        <span class="score-val" id="scoreVal">–<span>/10</span></span>
+        <p class="score-msg" id="scoreMsg"></p>
+        <div style="margin-top:20px;">
+          <button class="btn btn-outline" onclick="resetQuiz()">↺ Ripeti il questionario</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- GLOSSARIO -->
+    <div style="margin-top:36px;">
+      <div class="section-intro" style="margin-top:0;">
+        <h3>Glossario Essenziale</h3>
+        <p>Principali acronimi e termini del SI.GE.CO. Molise in materia di ammissibilità della spesa.</p>
+      </div>
+      <div style="background:white; border-radius:8px; padding:24px 28px; box-shadow:0 2px 12px rgba(0,0,0,0.06);">
+        <div class="gloss-item"><div class="gloss-term">RUA</div><div class="gloss-def">Responsabile Unico dell'Attuazione dell'Accordo — coordina e vigila sull'intera attuazione, prepara l'attestazione di spesa cumulata.</div></div>
+        <div class="gloss-item"><div class="gloss-term">RdA</div><div class="gloss-def">Responsabile dell'Attuazione di Progetti/Linee di Azione — gestisce i singoli interventi, elabora le attestazioni di spesa periodiche.</div></div>
+        <div class="gloss-item"><div class="gloss-term">ARDAS</div><div class="gloss-def">Autorità Regionale Preposta alla Dichiarazione dell'Ammissibilità della Spesa — elabora le domande di rimborso e le richieste di trasferimento FSC al DPCoeS.</div></div>
+        <div class="gloss-item"><div class="gloss-term">CUP</div><div class="gloss-def">Codice Unico di Progetto — identificatore obbligatorio di ogni progetto di investimento pubblico; deve essere riportato su tutti i documenti di spesa.</div></div>
+        <div class="gloss-item"><div class="gloss-term">SAL</div><div class="gloss-def">Stato Avanzamento Lavori — documento contabile che certifica la quota di lavori/servizi eseguiti a una certa data, base per le erogazioni parziali.</div></div>
+        <div class="gloss-item"><div class="gloss-term">DPR 66/2025</div><div class="gloss-def">Regolamento recante i criteri sull'ammissibilità della spesa per i programmi cofinanziati dai fondi europei 2021-2027 (FESR, FSE+, JTF, ecc.) — riferimento normativo primario.</div></div>
+        <div class="gloss-item"><div class="gloss-term">DURC</div><div class="gloss-def">Documento Unico di Regolarità Contributiva — certifica la regolarità nei pagamenti previdenziali e assicurativi; deve essere valido alla data di erogazione.</div></div>
+        <div class="gloss-item"><div class="gloss-term">Deggendorf</div><div class="gloss-def">Clausola che vieta la concessione di nuovi aiuti a imprese destinatarie di aiuti incompatibili dichiarati tali dalla Commissione UE e non ancora rimborsati (art. 1, Reg. 651/2014).</div></div>
+        <div class="gloss-item"><div class="gloss-term">FSC</div><div class="gloss-def">Fondo per lo Sviluppo e la Coesione — fondo nazionale che finanzia gli interventi dell'Accordo per la Coesione Governo – Regione Molise 2021-2027.</div></div>
+        <div class="gloss-item"><div class="gloss-term">ReGiS</div><div class="gloss-def">Sistema Nazionale di Monitoraggio per le politiche di coesione 2021-2027 — i dati inseriti in ReGiS sono la base esclusiva per i trasferimenti di risorse FSC.</div></div>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <button class="btn btn-outline" onclick="showSection(3)">‹ Casi Pratici</button>
+      <div class="right">
+        <button class="btn btn-primary" onclick="showSection(0)">↑ Torna all'inizio</button>
+      </div>
+    </div>
+  </section>
+
+</div><!-- /container -->
+
+<script>
+// Feedback per ogni domanda
+const feedbacks = {
+  q1: { ok: "✅ Corretto. Il DPR 66/2025 e il Reg. UE 2021/1060 fissano il limite al 10% della spesa totale ammissibile dell'operazione, elevato al 15% per siti in stato di degrado o precedentemente adibiti ad uso industriale. È sempre obbligatoria la perizia giurata del valutatore qualificato.", ko: "❌ Non corretto. Il limite generale è il 10% della spesa totale ammissibile (15% per siti degradati o ex-industriali), con perizia obbligatoria. Rivedi il Focus 2 — Acquisto di Terreni." },
+  q2: { ok: "✅ Corretto. La fidejussione bancaria o assicurativa, irrevocabile, incondizionata ed escutibile a prima richiesta, di importo pari all'anticipazione, è il documento specifico richiesto esclusivamente per le anticipazioni (sia per OO.PP. che per aiuti). Serve a garantire il recupero delle somme in caso di irregolarità.", ko: "❌ Non corretto. Il certificato di collaudo e lo stato finale dei lavori sono documenti del saldo. La relazione RUP accompagna i SAL. La fidejussione è il documento specifico dell'anticipazione. Rivedi il Focus 3 — Tabella Documentazione." },
+  q3: { ok: "✅ Corretto. Ai sensi dell'art. 64, par. 1, lett. c), Reg. UE 2021/1060 e del DPR 66/2025, l'IVA è ammissibile quando non sia recuperabile dal beneficiario. Lo split payment non consente all'ente pubblico di recuperare l'IVA (versata direttamente all'Erario), pertanto la spesa è ammissibile, previa idonea documentazione.", ko: "❌ Non corretto. L'IVA degli enti pubblici non è automaticamente esclusa. Se non recuperabile (es. split payment, pro-rata sfavorevole, esenzione IVA), è ammissibile. È sempre necessaria documentazione attestante la non recuperabilità. Rivedi il Focus 2 — IVA." },
+  q4: { ok: "✅ Corretto. Il SI.GE.CO. Molise v.1.0 prevede la conservazione per 5 anni successivi alla chiusura di ogni singolo intervento, in fascicoli cartacei o informatici, attraverso il sistema UrbiSMART della Regione.", ko: "❌ Non corretto. Il termine di conservazione previsto dal SI.GE.CO. Molise è di 5 anni successivi alla chiusura del singolo intervento. Il termine si calcola dalla chiusura dell'intervento, non dalla data dell'ultimo pagamento." },
+  q5: { ok: "✅ Corretto. Il D.Lgs. n. 36/2023 (art. 50) disciplina le soglie degli affidamenti diretti: fino a € 140.000 per servizi e forniture è ammesso l'affidamento diretto con adeguata motivazione (principio di rotazione); tra € 140.000 e la soglia europea (€ 221.000) è richiesta la procedura negoziata con almeno 5 operatori invitati. Per i lavori la soglia dell'affidamento diretto è € 150.000.", ko: "❌ Non corretto. La soglia per l'affidamento diretto di servizi e forniture è € 140.000 (art. 50, D.Lgs. 36/2023). Tra € 140.000 e € 221.000 si applica la procedura negoziata con almeno 5 operatori. Verificare sempre il rispetto del principio di rotazione e la motivazione nell'atto." },
+  q6: { ok: "✅ Corretto. La clausola Deggendorf (nome del caso giurisprudenziale europeo) richiede che il beneficiario dichiari di non essere destinatario di aiuti di Stato dichiarati incompatibili dalla Commissione europea e non ancora restituiti. È prevista dall'art. 1, Reg. UE 651/2014 (GBER) e Reg. UE 2023/1315.", ko: "❌ Non corretto. La clausola Deggendorf non riguarda i de minimis né lo stato di difficoltà (quelli sono condizioni separate). Riguarda specificamente gli aiuti dichiarati incompatibili e non rimborsati alla Commissione. Rivedi il Focus 2 — Aiuti alle Imprese." },
+  q7: { ok: "✅ Corretto. Il SI.GE.CO. Molise prevede che le verifiche on desk si estendano al 100% degli interventi FSC e al 100% delle spese rendicontate, a differenza dei fondi europei strutturali dove si applica il campionamento statistico. Questo è un elemento distintivo del sistema FSC.", ko: "❌ Non corretto. Per il FSC 2021-2027 dell'Accordo per la Coesione Molise, il SI.GE.CO. prevede il controllo al 100% delle spese rendicontate e al 100% degli interventi. Non si applica il campionamento statistico." },
+  q8: { ok: "✅ Corretto. Il DPR n. 66/2025 (e l'art. 53 del Reg. UE 2021/1060) prevede tra le SCO il tasso orario standard: costo annuo lordo del personale ÷ 1.720 ore convenzionali (oppure ore effettive risultanti da timesheet). Il timesheet deve essere firmato dal dipendente e dal responsabile. Le SCO eliminano l'obbligo di produrre cedolini e F24 per ogni ora rendicontata, semplificando i controlli documentali.", ko: "❌ Non corretto. Il DPR n. 66/2025 prevede il tasso orario standard (costo annuo lordo ÷ 1.720 ore) come principale SCO per il personale. Il forfait del 20% si applica ai costi indiretti (overhead), non al personale. Il rimborso esclusivamente su costi reali è sempre possibile ma non è la SCO. Rivedi il Focus 2 — Tipologie di Spesa." },
+  q9: { ok: "✅ Corretto. Il 'Dettaglio analitico della spesa con gli estremi delle quietanze di pagamento dell'intero intervento' è un documento previsto esclusivamente in fase di saldo finale, come specificato nella nota della check list C1 ('tale ulteriore riquadro va compilato se trattasi di check di saldo').", ko: "❌ Non corretto. Questo documento specifico è richiesto solo in fase di saldo, non nelle fasi di anticipazione o SAL. È un riepilogo complessivo di tutta la spesa dell'intervento con tutte le quietanze. Rivedi il Focus 3 — Tabella Documentazione." },
+  q10: { ok: "✅ Corretto. Secondo il SI.GE.CO. Molise, in caso di importi non ammissibili già rimborsati in pagamenti intermedi precedenti, il relativo importo va detratto dai pagamenti a rimborso effettuati in favore dei soggetti attuatori/beneficiari successivi all'accertamento, salvo diversa indicazione dell'ARDAS.", ko: "❌ Non corretto. Gli importi non ammissibili già erogati non vengono recuperati immediatamente con ingiunzione, né addebitati al RdA, ma vengono compensati detraendoli dai rimborsi successivi. La comunicazione alla Corte dei Conti avviene solo in caso di irregolarità sistematiche o gravi." }
+};
+
+let scores = {}, totalAnswered = 0, totalCorrect = 0;
+
+function answer(btn, qid, isCorrect, letter) {
+  if (scores[qid] !== undefined) return;
+  scores[qid] = isCorrect;
+  totalAnswered++;
+  if (isCorrect) totalCorrect++;
+
+  const allBtns = btn.parentElement.querySelectorAll('.option-btn');
+  allBtns.forEach(b => b.disabled = true);
+
+  btn.classList.add(isCorrect ? 'correct' : 'wrong');
+  if (!isCorrect) {
+    allBtns.forEach(b => {
+      const onclick = b.getAttribute('onclick');
+      if (onclick && onclick.includes(',true,')) b.classList.add('correct');
+    });
+  }
+
+  const fb = document.getElementById('fb-' + qid);
+  fb.innerHTML = feedbacks[qid][isCorrect ? 'ok' : 'ko'];
+  fb.className = 'feedback show ' + (isCorrect ? 'ok' : 'ko');
+
+  if (totalAnswered === 10) showScore();
+}
+
+function showScore() {
+  const s = document.getElementById('quizScore');
+  document.getElementById('scoreVal').innerHTML = totalCorrect + '<span>/10</span>';
+  const pct = totalCorrect * 10;
+  let msg = '';
+  if (pct >= 90) msg = '🏆 Eccellente! Piena padronanza dei principi di ammissibilità della spesa FSC.';
+  else if (pct >= 70) msg = '✅ Buono. Buona comprensione. Rivedi i punti errati nelle sezioni precedenti.';
+  else if (pct >= 50) msg = '⚠️ Sufficiente. Si consiglia di rivedere i Focus 2 e 3 prima di procedere ai controlli.';
+  else msg = '❌ Insufficiente. Si raccomanda la rilettura completa del modulo e della Check List C1.';
+  document.getElementById('scoreMsg').textContent = msg;
+  s.classList.add('show');
+  s.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function resetQuiz() {
+  scores = {}; totalAnswered = 0; totalCorrect = 0;
+  document.querySelectorAll('.option-btn').forEach(b => {
+    b.disabled = false;
+    b.classList.remove('correct', 'wrong');
+  });
+  document.querySelectorAll('.feedback').forEach(f => {
+    f.className = 'feedback';
+  });
+  document.getElementById('quizScore').classList.remove('show');
+}
+
+// Section navigation
+let currentSection = 0;
+const doneSections = new Set([0]);
+
+function showSection(idx) {
+  document.querySelectorAll('.section').forEach((s,i) => {
+    s.classList.toggle('active', i === idx);
+  });
+  const tabs = document.querySelectorAll('.nav-tab');
+  tabs.forEach((t, i) => {
+    t.classList.remove('active');
+    if (i === idx) t.classList.add('active');
+    if (doneSections.has(i) && i !== idx) t.classList.add('done');
+  });
+  doneSections.add(idx);
+  currentSection = idx;
+
+  // Update progress
+  const fill = Math.round((doneSections.size / 5) * 100);
+  document.getElementById('progressFill').style.width = fill + '%';
+  document.getElementById('progressText').textContent = 'Focus ' + doneSections.size + ' di 5';
+
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Accordion
+function toggleFocus(header) {
+  const body = header.nextElementSibling;
+  const arrow = header.querySelector('.focus-arrow');
+  const isOpen = body.classList.contains('open');
+  body.classList.toggle('open', !isOpen);
+  arrow.classList.toggle('open', !isOpen);
+}
+</script>
+</body>
+</html>
